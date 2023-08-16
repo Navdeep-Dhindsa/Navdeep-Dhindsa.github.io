@@ -2536,7 +2536,7 @@ select.mobile-device {
     .wrapper .researchgate:hover,
     .wrapper .researchgate:hover .tooltip,
     .wrapper .researchgate:hover .tooltip::before {
-      background-color: #3cb043;
+      background-color: #00563b;
       color: #ffffff;
     }
     .wrapper .github:hover,
@@ -2545,9 +2545,9 @@ select.mobile-device {
       background-color: #333333;
       color: #ffffff;
     }
-    .wrapper .youtube:hover,
-    .wrapper .youtube:hover .tooltip,
-    .wrapper .youtube:hover .tooltip::before {
-      background-color: #de463b;
+    .wrapper .skype:hover,
+    .wrapper .skype:hover .tooltip,
+    .wrapper .skype:hover .tooltip::before {
+      background-color: #00aff0;
       color: #ffffff;
     }
