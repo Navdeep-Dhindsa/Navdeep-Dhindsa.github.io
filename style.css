@@ -2472,3 +2472,9 @@ select.mobile-device {
       background-color: #00aff0;
       color: #ffffff;
     }
+    
+p {
+    word-break: break-all;
+    word-break: break-word;
+    hyphens: auto;
+}
