@@ -1200,9 +1200,9 @@ xclip
 }
 
 .hoverbutton {
-    background-color: #333333;
+    background-color: #ffffff;
     position: absolute;
-    color: #ffffff !important;
+    color: #333 !important;
     top: 70%;
     font-size: 21px;
     z-index: 12;
@@ -2478,3 +2478,232 @@ p {
     word-break: break-word;
     hyphens: auto;
 }
+
+.profile-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 300px; /* Adjust size as needed */
+    border-radius: 50%; /* Optional: makes the image circular */
+    transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.about-text {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.sim-btn {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 0px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sim-btn:hover {
+    background-color: #4a91f2;
+}
+
+.line-divider {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+}
+
+.zigzag-line {
+    position: absolute;
+    top: 50%;
+    left: -100%; /* Start off-screen */
+    width: 200%;
+    animation: zigzagMove 10s linear infinite;
+}
+
+@keyframes zigzagMove {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+.about-card {
+    display: flex;
+    max-width:1110px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.card-header {
+    flex: 1;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    text-align: center;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    max-width: 180px;
+    border-radius: 50%; /* Circular image */
+    transition: transform 0.3s ease;
+}
+
+.card-img:hover {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+
+.card-body h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-body {
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    word-wrap: break-word;  /* Ensure text wraps properly */
+    word-break: break-word; /* Prevent text overflow */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.card-body p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Add some spacing between lines */
+    overflow-wrap: break-word; /* Ensure long words break properly */
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #6fb1fc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #4a91f2;
+}
+
+.research-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+}
+
+
+.research-title {
+    text-align: center;
+    margin-bottom: 0px;
+    position: relative;
+}
+
+.research-title h2 {
+    font-size: 28px;
+    color: #555;
+    margin: 0;
+    padding: 0px 0px;
+    display: inline-block;
+    position: relative;
+}
+
+.line-divider {
+    margin-bottom: 0; /* Remove excess space after the line divider */
+}
+
+.about-card {
+    margin-bottom: 5px; /* Adjust as needed for a smaller gap */
+}
+
+.research-card {
+    margin-top: -40px; /* Adjust to control spacing */
+}
+
+.gallery-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.paper-card {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.paper-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.paper-img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.paper-details {
+    padding: 15px;
+    text-align: left;
+}
+
+.paper-details h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #4a91f2;
+}
+
+.paper-details p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.paper-link {
+    font-size: 14px;
+    color: #6fb1fc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.paper-link:hover {
+    text-decoration: underline;
+    color: #4a91f2;
+}
+
