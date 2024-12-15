@@ -343,16 +343,25 @@ a img.aligncenter {
     SECTIONS
 -------------------------------------------------------------------*/
 
-.main-banner{
-	height: 100%;
-	position: relative;
+/* Main banner section */
+.main-banner {
+    height: 100vh; /* Ensure it takes full viewport height */
+    position: relative;
+    display: table;
+    width: 100%;
+    text-align: center;
+    background: url('uploads/banner.jpg') no-repeat center center;
+    background-size: cover; /* Ensures the image covers the entire section */
 }
 
-.main-banner{
-	display: table;
-    width: 100%;
-	text-align: center;
+/* Banner text styling */
+.main-banner .heading {
+    position: relative;
+    z-index: 1; /* Ensure the text is above the overlay */
+    color: #fff;
 }
+
+/* Dark overlay */
 .main-banner::after {
     content: " ";
     position: absolute;
@@ -362,8 +371,26 @@ a img.aligncenter {
     right: 0;
     background-color: #000;
     z-index: 0;
-    opacity: .6;
+    opacity: 0.6; /* Adjust the opacity for better visibility of the image */
 }
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .main-banner {
+        background-position: center; /* Ensure the background stays centered */
+    }
+    .main-banner::after {
+        opacity: 0.4; /* Reduce the overlay opacity on mobile */
+    }
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+    .main-banner::after {
+        opacity: 0.5; /* Adjust overlay opacity for tablet screens */
+    }
+}
+
 .heading{
 	color: #fff;
 	display: table-cell;
@@ -2734,7 +2761,7 @@ p {
     transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden;
     margin-bottom: 20px;
-    width: 100%;
+    width: 98%;
 }
 
 .paper-card:hover {
@@ -2783,6 +2810,7 @@ p {
     background-color: #fff;
     padding: 20px;
     width: 95%;
+    justify-items: center;
 }
 
 .papers-title {
@@ -2920,21 +2948,41 @@ p {
     background-color: #0056b3;
 }
 
+/* Ensure gallery-list uses CSS Grid */
+/* Gallery list */
 .gallery-list {
     display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Default to 3 columns */
+    gap: 10px; /* Space between the items */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+    justify-items: center; /* Center the items horizontally */
+    margin-left: auto;  /* Align the grid container to the center */
+    margin-right: auto; /* Align the grid container to the center */
+    max-width: 1200px; /* Optional: Set a maximum width for the gallery */
+    width: 100%; /* Make sure the gallery takes full width of its parent */
 }
 
-@media (max-width: 908px) {
+/* For medium screens (2 columns) */
+@media (max-width: 768px) {
     .gallery-list {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller minimum width */
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
     }
 }
 
-@media (max-width: 1200px) {
+/* For smaller screens (1 column) */
+@media (max-width: 480px) {
     .gallery-list {
-        grid-template-columns: 1fr; /* Single column */
+        grid-template-columns: 1fr; /* 1 column for smaller screens */
     }
 }
 
+/* For cards inside the gallery */
+.gallery-grid {
+    margin: 0; /* Remove margin */
+}
+
+/* To center the entire gallery on smaller screens */
+#papers .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
