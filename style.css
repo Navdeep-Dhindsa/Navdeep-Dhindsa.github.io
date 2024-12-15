@@ -582,6 +582,8 @@ xclip
 .sim-btn{
 	line-height: 50px;
 	height: 50px;
+        align-items: center;
+        justify-content: center;
 	text-align: center;
 	margin-right: auto;
 	margin-left: auto;
@@ -1365,7 +1367,7 @@ hr.invis1 {
 
 
 .gallery-single{
-	margin: 30px 15px;;
+	margin: 20px 5px;;
 }
 
 .gallery-single {
@@ -1377,10 +1379,10 @@ hr.invis1 {
 
 .gallery-list .img-overlay {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
     background: rgba(51, 51, 51, 0.80);
     color: #000080;
     opacity: 0;
@@ -2487,12 +2489,13 @@ p {
 .profile-image img {
     width: 100%;
     max-width: 300px; /* Adjust size as needed */
-    border-radius: 50%; /* Optional: makes the image circular */
+    border-radius: 100%; /* Optional: makes the image circular */
     transition: transform 0.3s ease;
+    background-color: #333;
 }
 
 .profile-image img:hover {
-    transform: scale(1.1); /* Zoom effect on hover */
+    transform: scale(1.2); /* Zoom effect on hover */
 }
 
 .about-text {
@@ -2502,7 +2505,7 @@ p {
 
 .sim-btn {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 0px;
     background-color: #333;
     color: #fff;
     padding: 0px 20px;
@@ -2542,8 +2545,8 @@ p {
 .about-card {
     display: flex;
     max-width:1110px;
-    margin: 20px auto;
-    border: 1px solid #ddd;
+    margin: 0px auto;
+    border: 1px solid #333;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
@@ -2551,10 +2554,13 @@ p {
 
 .card-header {
     flex: 1;
+    font-size: 28px;
+    font-weight: bold;
     height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #ffffff00;
 }
 
 .profile-image {
@@ -2565,8 +2571,9 @@ p {
     width: 100%;
     height: 100%;
     max-width: 180px;
-    border-radius: 50%; /* Circular image */
+    border-radius: 0%; /* Circular image */
     transition: transform 0.3s ease;
+    background-color: #333;
 }
 
 .card-img:hover {
@@ -2575,7 +2582,8 @@ p {
 
 
 .card-body h2 {
-    font-size: 24px;
+    font-size: 28px;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
@@ -2615,40 +2623,50 @@ p {
     display: flex;
     flex-direction: column;
     max-width: 1100px;
-    margin: 20px auto;
-    border: 1px solid #ddd;
+    margin: 0px auto;
+    border: 1px solid #333; /* Keep border same as card background */
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    padding: 20px;
+    background-color: #333; /* Background for the entire card */
+    color: #fff; /* Default text color to white */
+    padding: 0px; /* Remove extra padding */
 }
-
 
 .research-title {
     text-align: center;
-    margin-bottom: 0px;
-    position: relative;
+    margin: 0; /* Ensure no extra spacing */
+    padding: 10px 10px; /* Adjust padding as needed */
+    border: none; /* Remove any borders */
+    border-radius: 15px 15px 0 0; /* Ensure smooth edges */
+    background-color: #333; /* Keep the same background */
+    color: #fff; /* Text color */
+    box-shadow: none; /* Remove shadow */
 }
 
 .research-title h2 {
     font-size: 28px;
-    color: #555;
-    margin: 0;
-    padding: 0px 0px;
-    display: inline-block;
-    position: relative;
+    font-weight: bold;
+    margin: 0; /* No extra spacing */
+    padding: 0; /* Reset padding */
+    color: #fff; /* Keep text color white */
+    background: none; /* Ensure no background is applied */
+    border: none; /* Remove any border below */
+    box-shadow: none; /* Ensure no shadow effect */
 }
+
 
 .line-divider {
     margin-bottom: 0; /* Remove excess space after the line divider */
 }
 
 .about-card {
-    margin-bottom: 5px; /* Adjust as needed for a smaller gap */
+    margin-bottom: -65px; /* Adjust as needed for a smaller gap */
+    margin-top: -55px;
 }
 
 .research-card {
-    margin-top: -40px; /* Adjust to control spacing */
+    margin-top: -50px; /* Adjust to control spacing */
+    margin-bottom: -50px;
 }
 
 .gallery-list {
@@ -2660,7 +2678,7 @@ p {
 .paper-card {
     width: 100%;
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid #333;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -2707,4 +2725,194 @@ p {
     color: #4a91f2;
 }
 
+/* Card Styling */
+.paper-card {
+    border: 1px solid #333;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.paper-card:hover {
+    transform: scale(0.95);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Image */
+.paper-card img {
+    border-bottom: 1px solid #333;
+    max-height: 180px;
+    object-fit: cover;
+}
+
+/* Card Body */
+.paper-card .card-body {
+    padding: 15px;
+    background-color: #ddd;
+}
+
+/* Title and Text */
+.paper-card .card-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0px;
+    
+    white-space: normal;
+}
+
+.paper-card .card-text {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    white-space: normal;
+}
+
+.papers-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    margin: 20px auto;
+    border: 1px solid #333;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+}
+
+.papers-title {
+    text-align: center;
+    margin-bottom: 0px;
+    position: relative;
+}
+
+.papers-title h2 {
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+    padding: 0px 0px;
+    display: inline-block;
+    position: relative;
+}
+
+.papers-card .card-body {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.papers-card .gallery-menu {
+    margin-top: 20px;
+}
+
+.papers-card .gallery-list .paper-card {
+    margin-bottom: 10px;
+}
+
+.papers-card .sim-btn {
+    width: auto; /* Prevents the button from taking full width */
+    max-width: 300px; /* Set a maximum width for the button */
+    padding: 00px 30px; /* Adjust padding for a more compact button */
+    text-align: center; /* Centers the button text */
+    display: inline-block; /* Ensures the button is inline */
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: none;
+    background: none;
+    justify-content: center; /* Center gallery horizontally */
+    align-items: center; 
+}
+
+.button-group button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333; /* Same background as .sim-btn */
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Match transition */
+}
+
+.button-group button.active {
+    background-color: #4a91f2;
+    color: #fff;
+    border-color: #4a91f2;
+    box-shadow: none;
+}
+
+.gallery-grid {
+    margin-right: 10px;   /* Add space between columns */
+    margin-bottom: 10px;  /* Add space between rows */
+    width: calc(33.33% - 10px);  /* Ensure width accounts for the margin */
+}
+
+.papers-card {
+    display: flex; /* Center gallery horizontally */
+    align-items: center; /* Center gallery vertically, if the container has height */
+    flex-direction: column; /* Ensure children are stacked vertically */
+}
+
+.papers-card {
+    margin-top: -50px; /* Adjust to control spacing */
+    margin-bottom: -50px;
+}
+
+/* Card Body Layout */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Ensure the content fills the card evenly */
+}
+
+.card-title {
+    margin: 0;
+    padding: 0;
+    font-size: 1.25rem;
+    text-align: left;
+    line-height: 1.4;
+    font-weight: bold;
+    white-space: normal; /* Allow the title to wrap */
+    height: 80px;
+}
+
+.card-text {
+    flex-grow: 1; /* Ensures authors and arXiv link align properly with the title */
+    padding-bottom: 15px; /* Add space between authors and arXiv link */
+    text-align: left; /* Center-align the authors and arXiv text */
+    margin-top: auto;
+    height: 100px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: auto; /* Push the footer (arXiv link) to the bottom of the card */
+}
+
+.card-footer a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card-footer a:hover {
+    background-color: #0056b3;
+}
 
