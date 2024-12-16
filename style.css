@@ -2787,8 +2787,8 @@ p {
     font-size: 16px;
     font-weight: bold;
     color: #333;
-    margin-bottom: 0px;
-    
+    margin-bottom: 10px;
+    overflow: auto;
     white-space: normal;
 }
 
@@ -2797,6 +2797,7 @@ p {
     color: #555;
     line-height: 1.5;
     white-space: normal;
+    overflow: auto;
 }
 
 .papers-card {
@@ -2959,13 +2960,6 @@ p {
     margin-right: auto; /* Align the grid container to the center */
     max-width: 1200px; /* Optional: Set a maximum width for the gallery */
     width: 100%; /* Make sure the gallery takes full width of its parent */
-}
-
-/* For medium screens (2 columns) */
-@media (max-width: 768px) {
-    .gallery-list {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
-    }
 }
 
 /* For smaller screens (1 column) */
